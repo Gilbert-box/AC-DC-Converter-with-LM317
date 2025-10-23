@@ -10,36 +10,33 @@ It converts an AC input into a stable adjustable or fixed 5V DC output using a f
 - Input: AC 12–15V (via transformer secondary)
 - Output: 1.25V – 12V DC (adjustable) or 5V Fixed 
   *(depends on input voltage and load conditions)*
-- Maximum Output Current: **~1A (with adequate heatsink)**
+- Maximum Output Current: 1A (need to add heatsink)
 - Built-in fuse protection on AC input
 
 ---
 
 ## How It Works
 
-1. **AC to DC Conversion**  
+1. AC to DC Conversion
    The input AC voltage passes through a **fuse (F1)** for protection.  
    The **bridge rectifier (D1–D4)** converts AC to DC signal.
 
-2. **Input Filter**  
+2. Input Filter 
    Two decoupling capacitors:
    - Polarized Capacitor 1000µF smooths the rectified DC.  
    - Non Polarized 100nF filter high-frequency noise input.
 
-4. **Voltage Regulation (LM317)**  
-   The **LM317 (U1)** regulates the voltage according to the equation:  
-   \[
-   V_{OUT} = 1.25V \left(1 + \frac{R2}{R1}\right) + I_{Adj} \times R2
-   \]
-   With \( R1 = 240Ω \) and a variable resistor \( RV1 = 10kΩ \), the output can be smoothly adjusted.
-
-5. **Output Filter**
+4. Voltage Regulation (LM317)  
+   The LM317 regulates the voltage according to the equation:  
+   ![Equation](Equation.jpg)
+  
+5. Output Filter
    Two decoupling capacitors:
    - Polarized Capacitor 1000µF smooths the regulator output.  
    - Non Polarized 100nF filter high-frequency noise.
     
-7. **Load Output**  
-   The regulated DC voltage is available at **J2** connector pins.
+7. Load Output 
+   The regulated DC voltage is available at J2 connector pins.
 
 ---
 

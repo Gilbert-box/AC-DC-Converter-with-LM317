@@ -1,4 +1,4 @@
-# AC-DC-Converter-with-LM317
+# AC-DC Converter with LM317
 
 This is a AC-DC Converter with LM317 voltage regulator IC.  
 It converts an AC input into a stable adjustable or fixed 5V DC output using a full-wave bridge rectifier, filter capacitors, and LM317 regulator.
